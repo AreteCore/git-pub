@@ -11,6 +11,6 @@ app.listen(PORT, () => {
 })
 
 app.get("/", (req,res) => {
-    res.send('Welcome to the Gitpub App!')
+    res.render('drinks_index.ejs')
 })
 
