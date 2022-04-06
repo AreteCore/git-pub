@@ -11,6 +11,15 @@ app.listen(PORT, () => {
 })
 
 app.get("/", (req,res) => {
-    res.render('drinks_index.ejs')
+    res.render('drinks_index.ejs',{drinksMenu: drinks})
 })
 
+app.get("/drinks/:id", (req,res) => {
+    res.render('drinks_show.ejs', {
+        drink: drinks[req.params.id]
+    })
+})
+
+
+// next step
+//https://seir-222-sasquatch.netlify.app/backend-fundamentals/week-7/day-1/labs/git-pub/#rendering-an-individual-drink-in-the-show-view
