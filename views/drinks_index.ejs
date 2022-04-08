@@ -25,10 +25,11 @@
 </head>
 <body>
     <h1>Welcome to gitPub</h1>
+    <a href="../food">Check out our food menu</a>
     <ul>
         <% for(let drink in drinksMenu) { %>
         <li>
-          <a href="/drinks/<%=drink%>"><%=drinksMenu[drink].name %></a>
+          <a href="/drinks/<%=drink%>"><%=drinksMenu[drink].name.charAt(0).toUpperCase() + drinksMenu[drink].name.slice(1) %></a>
         </li>
         <% } %>
       </ul>

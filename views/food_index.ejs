@@ -24,8 +24,14 @@
     </style>
 </head>
 <body>
-    <h1>Drink Page</h1>
-    <h4><%= drink.name %>     $<%= drink.price %>.00</h4>
-    <img src="<%=drink.image%>" alt="">
+    <h1>Welcome to gitPub's Gastro Menu</h1>
+    <a href="../">Back to main</a>
+    <ul>
+        <% for (let food in foodMenu) { %>
+        <li>
+          <a href="/food/<%=food%>"><%=foodMenu[food].name.charAt(0).toUpperCase() + foodMenu[food].name.slice(1) %></a>
+        </li>
+        <% } %>
+      </ul>
 </body>
 </html>
